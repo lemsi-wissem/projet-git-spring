@@ -3,8 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import tn.esprit.spring.entities.Client;
 import tn.esprit.spring.entities.Boutique;
 
@@ -32,6 +30,11 @@ public class ClientServiceImpl implements ClientService  {
 		
 	}
 
-	
+	@Override
+	public List<Client> listedeClients(Long idBoutique) {
+		Boutique b = boutiqueRepo.findById(idBoutique);
+		List<Client> l = b.getClients();
+		return l;
+	}
 
 }

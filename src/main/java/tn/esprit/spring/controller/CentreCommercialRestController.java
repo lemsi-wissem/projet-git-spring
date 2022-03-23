@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -32,7 +31,7 @@ public class CentreCommercialRestController {
 	@Autowired
 	ClientService clientService;
 	
-	@PostMapping("/ajouter-centre")
+	@PostMapping("/add-centre")
 	public void ajouterCentre(@RequestBody CentreCommercial centreCommercial) {
 		centreService.ajouterCentre(centreCommercial);
 	}
@@ -43,8 +42,15 @@ public class CentreCommercialRestController {
 		boutiqueService.ajouterEtaffecterListeboutique(b,centerId);
 		return b;
 	}
-	@PostMapping("/ajouter-client")
+	@PostMapping("/add-client")
 	public void ajouterClient(@RequestBody Client client,@RequestBody List<Long> b ) {
 		clientService.ajouterEtAffecterClientBoutiques(client,b);
+	}
+	
+	@GetMapping("/get-clients/{boutique-id}")
+	@ResponseBody
+	public List<Client> getClients(@PathVariable("boutique-id") Long boutiqueId){
+		List<Client> liste = clientService.listedeClients(boutiqueId);
+		return liste;
 	}
 }
