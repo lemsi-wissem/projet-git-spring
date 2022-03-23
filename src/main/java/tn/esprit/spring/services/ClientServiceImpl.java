@@ -31,6 +31,9 @@ public class ClientServiceImpl implements ClientService  {
 		clientRepo.save(client);
 		
 	}
+	public void ajoutClient(Client client){
+		clientRepo.save(client);
+	}
 
 	
 
