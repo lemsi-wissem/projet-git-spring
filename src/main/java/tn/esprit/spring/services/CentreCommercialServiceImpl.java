@@ -15,7 +15,7 @@ public class CentreCommercialServiceImpl implements CentreCommercialService {
 	public void ajouterCentre(CentreCommercial centre) {
 		// TODO Auto-generated method stub
 		centreRepository.save(centre);
-		
+		//commentaire oussema 2
 		
 	}
 
