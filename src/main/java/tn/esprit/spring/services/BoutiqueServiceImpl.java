@@ -26,6 +26,7 @@ public class BoutiqueServiceImpl implements BoutiqueService {
 		for(Boutique boutique:lb) {
 			boutique.setCentreCommercial(c);
 			boutiqueRepo.save(boutique);
+			// commentaire oussema 1
 		}
 	}
 
