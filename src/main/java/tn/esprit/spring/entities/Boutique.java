@@ -15,7 +15,7 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Boutique implements Serializable {
-
+	//houssem comment
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
