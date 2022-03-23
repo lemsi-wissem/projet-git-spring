@@ -22,7 +22,7 @@ public class ClientServiceImpl implements ClientService  {
 	@Override
 	public void ajouterEtAffecterClientBoutiques(Client client, List<Long> idBoutiques) {
 		// TODO Auto-generated method stub
-		List<Boutique> boutiques = new ArrayList();
+		List<Boutique> boutiques = new ArrayList<Boutique>();
 		for(Long idboutique:idBoutiques) {
 			Boutique b = boutiqueRepo.findById(idboutique);
 			boutiques.add(b);
