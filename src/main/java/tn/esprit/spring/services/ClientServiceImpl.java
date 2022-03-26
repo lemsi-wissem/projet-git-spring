@@ -18,7 +18,7 @@ public class ClientServiceImpl implements ClientService  {
 	BoutiqueRepository boutiqueRepo;
 
 	@Override
-	public void ajouterEtAffecterClientBoutiques(Client client, List<Long> idBoutiques) {
+	public void ajouterAffecterClientBoutiques(Client client, List<Long> idBoutiques) {
 		// TODO Auto-generated method stub
 		List<Boutique> boutiques = new ArrayList<Boutique>();
 		for(Long idboutique:idBoutiques) {
