@@ -51,6 +51,9 @@ public class CentreCommercialRestController {
 	@ResponseBody
 	public List<Client> getClients(@PathVariable("boutique-id") Long boutiqueId){
 		List<Client> liste = clientService.listedeClients(boutiqueId);
-		return liste;
+		return liste;}
+	@PostMapping("/ajouter-boutique")
+	public void ajouterBoutique(@RequestBody Boutique boutique){
+		boutiqueService.ajoutBoutique(boutique);
 	}
 }

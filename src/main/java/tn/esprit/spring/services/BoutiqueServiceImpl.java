@@ -28,5 +28,8 @@ public class BoutiqueServiceImpl implements BoutiqueService {
 			boutiqueRepo.save(boutique);
 		}
 	}
+	public void ajoutBoutique(Boutique b){
+		boutiqueRepo.save(b);
+	}
 
 }
