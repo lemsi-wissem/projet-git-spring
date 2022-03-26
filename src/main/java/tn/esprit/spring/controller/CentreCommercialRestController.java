@@ -17,8 +17,6 @@ import tn.esprit.spring.services.CentreCommercialService;
 import tn.esprit.spring.services.BoutiqueService;
 import tn.esprit.spring.services.ClientService;
 
-
-
 @RestController
 @RequestMapping("/data")
 public class CentreCommercialRestController {
@@ -32,19 +30,19 @@ public class CentreCommercialRestController {
 	ClientService clientService;
 	
 	@PostMapping("/add-centre")
-	public void ajouterCentre(@RequestBody CentreCommercial centreCommercial) {
-		centreService.ajouterCentre(centreCommercial);
+	public void ajouterCentre(@RequestBody CentreCommercial c) {
+		centreService.ajouterCentre(c);
 	}
 	
 	@GetMapping("/add-boutique/{centre-id}")
 	@ResponseBody
-	public List<Boutique> addBoutique(@RequestBody List<Boutique> b, @PathVariable("center-id") int centerId){
-		boutiqueService.ajouterEtaffecterListeboutique(b,centerId);
+	public List<Boutique> addBoutique(@RequestBody List<Boutique> b, @PathVariable("center-id") int center_id){
+		boutiqueService.ajouterEtaffecterListeboutique(b,center_id);
 		return b;
 	}
 	@PostMapping("/add-client")
-	public void ajouterClient(@RequestBody Client client,@RequestBody List<Long> b ) {
-		clientService.ajouterEtAffecterClientBoutiques(client,b);
+	public void ajouterClient(@RequestBody Client client,@RequestBody List<Long> boutiques_ids ) {
+		clientService.ajouterEtAffecterClientBoutiques(client,boutiques_ids);
 	}
 	
 	@GetMapping("/get-clients/{boutique-id}")

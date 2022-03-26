@@ -24,9 +24,10 @@ public class ClientServiceImpl implements ClientService  {
 		for(Long idboutique:idBoutiques) {
 			Boutique b = boutiqueRepo.findById(idboutique);
 			boutiques.add(b);
+
 		}
-		client.setBoutiques(boutiques);
-		clientRepo.save(client);
+		c.setBoutiques(boutiques);
+		clientRepo.save(c);
 		
 	}
 	public void ajoutClient(Client client){
