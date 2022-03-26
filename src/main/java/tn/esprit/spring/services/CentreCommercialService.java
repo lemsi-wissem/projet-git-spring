@@ -3,5 +3,5 @@ import tn.esprit.spring.entities.CentreCommercial;
 
 public interface CentreCommercialService {
 	
-	void ajouterCentre(CentreCommercial centre);
+	void ajouterCentre(CentreCommercial center);
 }

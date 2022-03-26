@@ -20,10 +20,10 @@ public class BoutiqueServiceImpl implements BoutiqueService {
 	CentreCommercialRepository centreRepo;
 	
 	@Override
-	public void ajouterEtaffecterListeboutique(List<Boutique> lb, int idCentre) {
+	public void ajouterEtaffecterListeboutique(List<Boutique> boutiques, int idCentre) {
 		// TODO Auto-generated method stub
 		CentreCommercial c = centreRepo.findById(idCentre).orElse(null);
-		for(Boutique boutique:lb) {
+		for(Boutique boutique:boutiques) {
 			boutique.setCentreCommercial(c);
 			boutiqueRepo.save(boutique);
 		}
