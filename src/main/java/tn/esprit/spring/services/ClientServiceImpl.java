@@ -18,15 +18,20 @@ public class ClientServiceImpl implements ClientService  {
 	BoutiqueRepository boutiqueRepo;
 
 	@Override
-	public void ajouterEtAffecterClientBoutiques(Client c, List<Long> boutiques_ids) {
-		List<Boutique> boutiques = new ArrayList();
-		for(Long id:boutiques_ids) {
-			Boutique boutique = boutiqueRepo.findById(id);
-			boutiques.add(boutique);
+	public void ajouterEtAffecterClientBoutiques(Client client, List<Long> idBoutiques) {
+		// TODO Auto-generated method stub
+		List<Boutique> boutiques = new ArrayList<Boutique>();
+		for(Long idboutique:idBoutiques) {
+			Boutique b = boutiqueRepo.findById(idboutique);
+			boutiques.add(b);
+
 		}
 		c.setBoutiques(boutiques);
 		clientRepo.save(c);
 		
+	}
+	public void ajoutClient(Client client){
+		clientRepo.save(client);
 	}
 
 	@Override

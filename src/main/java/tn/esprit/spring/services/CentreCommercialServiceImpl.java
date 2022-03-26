@@ -12,8 +12,12 @@ public class CentreCommercialServiceImpl implements CentreCommercialService {
 	CentreCommercialRepository centreRepository;
 
 	@Override
-	public void ajouterCentre(CentreCommercial c) {
-		centreRepository.save(c);		
+	public void ajouterCentre(CentreCommercial centre) {
+		// TODO Auto-generated method stub
+		centreRepository.save(centre);
+		//commentaire oussema 2
+		
+
 	}
 
 }

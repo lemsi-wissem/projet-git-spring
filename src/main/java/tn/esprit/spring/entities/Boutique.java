@@ -28,7 +28,7 @@ import lombok.experimental.FieldDefaults;
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Boutique implements Serializable {
-
+	//houssem comment
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id;
