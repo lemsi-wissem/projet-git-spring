@@ -6,5 +6,6 @@ public interface ClientService {
 	
 	void ajouterEtAffecterClientBoutiques(Client client, List<Long> idBoutiques) ;
 	/*hehehehehehehehehe xD */
+	/*HELLOOOOO*/
 
 }
