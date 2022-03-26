@@ -5,4 +5,5 @@ import tn.esprit.spring.entities.Boutique;
 
 public interface BoutiqueService {
 	void ajouterEtaffecterListeboutique(List<Boutique>lb,int idCentre);
+	void ajoutBoutique(Boutique b);
 }

@@ -47,4 +47,8 @@ public class CentreCommercialRestController {
 	public void ajouterClient(@RequestBody Client client,@RequestBody List<Long> b ) {
 		clientService.ajouterEtAffecterClientBoutiques(client,b);
 	}
+	@PostMapping("/ajouter-boutique")
+	public void ajouterBoutique(@RequestBody Boutique boutique){
+		boutiqueService.ajoutBoutique(boutique);
+	}
 }
