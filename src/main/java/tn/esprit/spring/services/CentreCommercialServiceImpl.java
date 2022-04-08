@@ -9,12 +9,12 @@ import tn.esprit.spring.repositories.CentreCommercialRepository;
 public class CentreCommercialServiceImpl implements CentreCommercialService {
 	
 	@Autowired
-	CentreCommercialRepository centreRepository;
+	CentreCommercialRepository centreRepo;
 
 	@Override
-	public void ajouterCentre(CentreCommercial centre) {
-		// TODO Auto-generated method stub
-		centreRepository.save(centre);
+	public void addCenter(CentreCommercial centre) {
+		centreRepo.save(centre);
+		System.out.println("Center Added Successfully");
 		//commentaire oussema 2
 		
 
